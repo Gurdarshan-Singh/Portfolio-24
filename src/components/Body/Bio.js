@@ -3,7 +3,7 @@ import Card from "../CustomCard/Card";
 
 const Bio = () => {
   return (
-    <div>
+    <div id="about">
       <Card
         title="About Me"
         body=" I am a highly motivated and results-oriented software developer with a

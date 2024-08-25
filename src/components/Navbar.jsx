@@ -63,9 +63,9 @@ const Navbar = () => {
               <MenuIcon />
             </IconButton>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <Button color="inherit">About</Button>
-              <Button color="inherit">Projects</Button>
-              <Button color="inherit">Newsletter</Button>
+              <Button href="#about" color="inherit">About</Button>
+              <Button href="#projects" color="inherit">Projects</Button>
+              <Button href="#exp" color="inherit">Experience</Button>
               <Button color="inherit" onClick={handleClick}>
                 <strong>Resume</strong>
               </Button>
@@ -84,16 +84,16 @@ const Navbar = () => {
             onKeyDown={toggle(false)}
           >
             <List>
-              <ListItem button>
-                <ListItemText primary="About" />
+              <ListItem component="a" href="#about" sx={{color:'black'}}>
+                <ListItemText href="#about" primary="About" />
               </ListItem>
-              <ListItem button>
+              <ListItem component="a" href="#projects" sx={{color:'black'}}>
                 <ListItemText primary="Projects" />
               </ListItem>
-              <ListItem button>
-                <ListItemText primary="Newsletter" />
+              <ListItem component="a" href="#exp" sx={{color:'black'}}>
+                <ListItemText primary="Experience" />
               </ListItem>
-              <ListItem button onClick={handleClick}>
+              <ListItem  onClick={handleClick}>
                 <ListItemText primary="Resume" />
               </ListItem>
             </List>

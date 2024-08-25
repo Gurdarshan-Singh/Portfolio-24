@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../CustomCard/Card";
 
 const Project = () => {
-  return <div>
+  return <div id="projects">
     <Card title="Projects" body="Below is the list of projects I have worked on..">
 
     </Card>

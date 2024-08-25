@@ -7,6 +7,16 @@ import { Button } from "@mui/material";
 import './styles.css'
 
 const Navbar = () => {
+  const resumeUrl = "https://drive.google.com/file/d/1DXSVA5rOVnB7hbdDP4gPaT9ZLfI5HQNg/view?usp=sharing";
+
+  const handleClick = () => {
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = "Gurdarshan_Singh_Resume.pdf"; // Name the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
   return (
     <>
       <Box sx={{ flexGrow: 1, zIndex:100 }}>
@@ -30,7 +40,7 @@ const Navbar = () => {
             <Button color="inherit">About</Button>
             <Button color="inherit">Projects</Button>
             <Button color="inherit">Newsletter</Button>
-            <Button color="inherit"><strong>Resume</strong></Button>
+            <Button color="inherit" onClick={handleClick}><strong>Resume</strong></Button>
           </Toolbar>
         </AppBar>
       </Box>
